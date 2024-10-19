@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Registration</h1>
+
+    <div th:if="${success != null}" class="alert" th:class="${success ? 'alert-success' : 'alert-danger'}" role="alert">
+        <span th:text="${success ? 'Registration successful!' : ' '}"></span>
+    </div>
+
+    <form th:method="POST" th:action="@{/register}" th:object="${userDTO}">
+        <div>
+            <label for="name">Enter the username:</label>
+            <input type="text" th:field="*{name}" id="name" required />
+            <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+        </div>
+
+        <div>
+            <label for="age">Enter your age:</label>
+            <input type="number" th:field="*{age}" id="age" min="0" max="135" required />
+            <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</div>
+        </div>
+
+        <div>
+            <label for="password">Enter your password:</label>
+            <input type="password" th:field="*{password}" id="password" required />
+            <div style="color:red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</div>
+        </div>
+
+        <div>
+            <label for="confirmPassword">Confirm your Password:</label>
+            <input type="password" th:field="*{confirmPassword}" id="confirmPassword" required />
+            <div style="color:red" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}">Confirm Password Error</div>
+        </div>
+
+        <div>
+            <button type="submit" class="button">Register</button>
+        </div>
+    </form>
+
+    <div>
+        <a href="/login" class="button">Login</a>
+    </div>
+</div>
+</body>
+</html>

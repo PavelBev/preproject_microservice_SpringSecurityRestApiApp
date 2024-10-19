@@ -1,0 +1,279 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+}
+
+a {
+    color: #007BFF; /* Цвет обычных ссылок */
+    text-decoration: none; /* Убираем подчеркивание у обычных ссылок */
+}
+
+a:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    width: 300px; /* Фиксированная ширина для полей ввода */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход для рамки и тени */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}
+
+input[type="submit"] {
+    background-color: #007BFF; /* Цвет кнопки отправки */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Плавный переход цвета и эффекта поднятия */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+/* Стили для кнопок */
+.button {
+    display: inline-block;
+    background-color: #6c757d; /* Новый цвет фона кнопки (серый) */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #5a6268; /* Темный цвет кнопки при наведении */
+    transform: translateY(-2px); /* Эффект поднятия */
+}
+
+.button:active {
+    transform: translateY(1px); /* Эффект при нажатии */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Анимации при загрузке и взаимодействии */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeIn 0.5s ease; /* Появление контейнера */
+}
+
+form div {
+    animation: fadeIn 0.5s ease forwards; /* Появление полей ввода */
+}
+
+.button, input[type="submit"] {
+    animation: fadeIn 0.6s ease forwards; /* Появление кнопок */
+}
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0; /* Добавить отступы сверху и снизу */
+    opacity: 0; /* Начальное состояние (прозрачный) */
+    animation: fadeIn 0.5s forwards; /* Появление с анимацией */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Начальная прозрачность */
+        transform: translateY(-10px); /* Подъем, чтобы выглядеть интереснее */
+    }
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateY(0); /* Вернуться на место */
+    }
+}
+
+
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 20px;*/
+/*    background-color: #f5f5f5;*/
+/*}*/
+
+/*h1 {*/
+/*    color: #333;*/
+/*}*/
+
+/*a {*/
+/*    color: #007BFF; !* Цвет обычных ссылок *!*/
+/*    text-decoration: none; !* Убираем подчеркивание у обычных ссылок *!*/
+/*}*/
+
+/*a:hover {*/
+/*    text-decoration: none; !* Убираем подчеркивание при наведении *!*/
+/*}*/
+
+/*.container {*/
+/*    max-width: 800px;*/
+/*    margin: 0 auto;*/
+/*    background: #fff;*/
+/*    padding: 20px;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*form div {*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*label {*/
+/*    display: block;*/
+/*    margin-bottom: 5px;*/
+/*}*/
+
+/*input[type="text"],*/
+/*input[type="password"],*/
+/*input[type="number"] {*/
+/*    width: 300px; !* Фиксированная ширина для полей ввода *!*/
+/*    padding: 10px;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 4px;*/
+/*    transition: border-color 0.3s, box-shadow 0.3s; !* Плавный переход для рамки и тени *!*/
+/*}*/
+
+/*input[type="text"]:focus,*/
+/*input[type="password"]:focus,*/
+/*input[type="number"]:focus {*/
+/*    border-color: #007BFF;*/
+/*    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); !* Тень при фокусе *!*/
+/*}*/
+
+/*!* Стили для кнопок *!*/
+/*.button, input[type="submit"] {*/
+/*    display: inline-block;*/
+/*    background-image: linear-gradient(to right, #6A9113 0%, #141517 51%, #6A9113 100%);*/
+/*    color: white;*/
+/*    padding: 10px 15px;*/
+/*    border: none;*/
+/*    border-radius: 10px; !* Более закругленные углы *!*/
+/*    text-align: center;*/
+/*    font-size: 16px;*/
+/*    cursor: pointer;*/
+/*    text-decoration: none; !* Убираем подчеркивание *!*/
+/*    transition: background-position 0.5s, transform 0.3s; !* Плавный переход цвета фона и эффекта поднятия *!*/
+/*    background-size: 200% auto; !* Увеличиваем размер градиента для эффекта анимации *!*/
+/*}*/
+
+/*.button {*/
+/*    animation: fadeIn 0.6s ease forwards; !* Появление кнопок *!*/
+/*}*/
+
+/*.button:hover, input[type="submit"]:hover {*/
+/*    background-position: right center; !* Переливание градиентом при наведении *!*/
+/*    transform: scale(1.05); !* Увеличение кнопки при наведении *!*/
+/*}*/
+
+/*!* Эффект при нажатии *!*/
+/*.button:active, input[type="submit"]:active {*/
+/*    transform: translateY(2px); !* Эффект при нажатии *!*/
+/*}*/
+
+/*table {*/
+/*    width: 100%;*/
+/*    border-collapse: collapse;*/
+/*    margin-top: 20px;*/
+/*}*/
+
+/*th, td {*/
+/*    text-align: left;*/
+/*    padding: 10px;*/
+/*    border-bottom: 1px solid #ddd;*/
+/*}*/
+
+/*th {*/
+/*    background-color: #f2f2f2;*/
+/*}*/
+
+/*!* Новая анимация для появления *!*/
+/*@keyframes fadeIn {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*        transform: translateY(20px);*/
+/*    }*/
+/*    50% {*/
+/*        opacity: 0.5;*/
+/*    }*/
+/*    100% {*/
+/*        opacity: 1;*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*}*/
+
+/*.container {*/
+/*    animation: fadeIn 0.5s ease; !* Появление контейнера *!*/
+/*}*/
+
+/*form div {*/
+/*    animation: fadeIn 0.5s ease forwards; !* Появление полей ввода *!*/
+/*}*/
+
+

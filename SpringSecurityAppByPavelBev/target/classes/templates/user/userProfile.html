@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<div class="container">
+    <h1>User Profile</h1>
+    <a href="/logout" style="float: right;" class="button">Logout</a>
+    <div>
+        <p><strong>ID:</strong> <span th:text="${user.id}"></span></p>
+        <p><strong>Name:</strong> <span th:text="${user.name}"></span></p>
+        <p><strong>Age:</strong> <span th:text="${user.age}"></span></p>
+        <p><strong>Roles:</strong> <span th:text="${user.roles}"></span></p>
+    </div>
+    <a th:href="@{/admin}" class="button">Back to Users List</a>
+</div>
+</body>
+</html>
